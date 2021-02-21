@@ -1,0 +1,12 @@
+{
+	"Emp_ID": 1,
+	"Personal_details":{
+		"First_Name": "Simon",
+		"Last_Name": "Geißler",
+		"Date_Of_Birth": "26.08.1998"
+	},
+	"Contact": {
+		"e-mail": "sim.geissler.19@lehre.mosbach.dhbw.de",
+		"phone": "081542069"
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"Emp_ID": 3,
+	"Personal_details":{
+		"First_Name": "Dominik",
+		"Last_Name": "Stein",
+		"Date_Of_Birth": "12.02.1986"
+	},
+	"Contact": {
+		"e-mail": "dom.stein.18@lehre.mosbach.dhbw.de",
+		"phone": "023142069"
+	},
+	"Contact_2": {
+		"e-mail": "d.stein@gmail.com",
+		"phone": "083254069"
+	}
+}
