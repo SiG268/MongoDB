@@ -1,6 +1,6 @@
-import pymongo
 import json
 import os
+import pymongo
 from pymongo import MongoClient
 
 client = MongoClient("mongodb://127.0.0.1:27017/?directConnection=true")
@@ -37,21 +37,20 @@ def readCondition():
         "Emp_ID": {"$gt":1}
     }
 
-    res=collection.find(query)
+    res=collection.find_many(query)
     for x in res:
         print(x)
 
 def readCondition2():
     query = {
         "$and":[
-        {"Emp_ID": {"$gt":1}},
-        {"Personal_details.Last_Name":"Hörich"}
+            {"Emp_ID": {"$gt":1}},
+            {"Personal_details.Date_Of_Birth":"31.08.1960"}
         ]
     }
 
-    res=collection.find(query)
-    for x in res:
-        print(x)
+    res=collection.find_one(query)
+    print(res)
 #############################UPDATE#############################
 def update():
     collection.update_one({"Emp_ID":1},{"$set":{"Contact.phone":""}})
@@ -60,7 +59,7 @@ def update():
 
 def delete():
     collection.delete_one({"Emp_ID":1})
-    
+
 
 #create_one("JSON/testdata0.json")
 #create_multiple("JSON")
@@ -70,4 +69,5 @@ def delete():
 #readCondition2()
 #update()
 #delete()
+
 
